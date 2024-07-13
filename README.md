@@ -7,6 +7,7 @@ This is also very versilte application which can be used in day-to-day life.
 
 ![image](https://github.com/user-attachments/assets/dac12853-84fd-40b6-ba47-3be66696ce07)
 ![image](https://github.com/user-attachments/assets/64226d4f-fdf7-4a7c-a4e4-d4eaca9673e6)
+![image](https://github.com/user-attachments/assets/f299d961-bd0e-429a-8ef8-ee08b72601cb)
 ![image](https://github.com/user-attachments/assets/103bdb8a-9404-4f7c-85a9-e36a37bf55af)
 ![image](https://github.com/user-attachments/assets/17038ce1-77b4-428f-a308-939acc0d6168)
 ![image](https://github.com/user-attachments/assets/03ef1d78-79cb-40b4-a4b1-6e075b0abf73)
