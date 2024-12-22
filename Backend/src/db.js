@@ -1,7 +1,9 @@
 const mongoose = require("mongoose")
 
+const mongoURI = "mongodb+srv://ayush:ayushraj%40198@cluster0.ooyac.mongodb.net/LMS?retryWrites=true&w=majority"
+
 const connectDb = async () => {
-  return (await mongoose.connect('mongodb://localhost:27017/lms', {useNewUrlParser: true, useUnifiedTopology: true}).then(() => console.log("MongoDB Connected"))
+  return (await mongoose.connect(mongoURI, {useNewUrlParser: true, useUnifiedTopology: true}).then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log("Mongo error", err))) ;   
 }
 
