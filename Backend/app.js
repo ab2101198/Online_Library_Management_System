@@ -6,9 +6,9 @@ const express = require("express")
 const morgan = require("morgan")
 const cookieParser = require("cookie-parser")
 const sessions = require("express-session")
-const { apiV1 } = require("./routes")
-const { connectDb } = require("./db")
-const { UserModel } = require("./models/user")
+const { apiV1 } = require("./src/routes")
+const { connectDb } = require("./src//db")
+const { UserModel } = require("./src/models/user")
 
 const app = express()
 const port = process.env.PORT || 8080
