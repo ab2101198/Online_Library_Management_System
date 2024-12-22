@@ -7,7 +7,7 @@ const morgan = require("morgan")
 const cookieParser = require("cookie-parser")
 const sessions = require("express-session")
 const { apiV1 } = require("./src/routes")
-const { connectDb } = require("./src//db")
+const { connectDb } = require("./src/db")
 const { UserModel } = require("./src/models/user")
 
 const app = express()
