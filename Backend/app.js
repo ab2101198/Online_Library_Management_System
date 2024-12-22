@@ -32,7 +32,7 @@ app.use(
 
 
 const corsOptions = {
-  origin: "http://localhost:3000",
+  origin: "https://online-library-management-system-frontend.onrender.com",
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', 
   credentials: true
 };
