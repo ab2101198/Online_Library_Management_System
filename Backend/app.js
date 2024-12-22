@@ -11,6 +11,7 @@ const { connectDb } = require("./db")
 const { UserModel } = require("./models/user")
 
 const app = express()
+const port = process.env.PORT || 8080
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -62,7 +63,7 @@ connectDb()
     }
   })
   .then(() => {
-    app.listen(8080, () => console.log("Server is listening on http://localhost:8080"))
+    app.listen(port, () => console.log(`Server is listening on http://localhost:${port}`))
   })
   .catch((err) => {
     console.error("Failed to connect to database", err)
