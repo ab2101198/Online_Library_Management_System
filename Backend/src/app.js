@@ -39,7 +39,6 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 
-
 app.use("/v1", apiV1)
 
 app.use((req, res) => {

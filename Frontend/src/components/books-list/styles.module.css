@@ -39,3 +39,15 @@
     justify-content: flex-end;
     border-top: 1px solid #e4e4e4;
 }
+
+@media (max-width: 600px) {
+    .conf_modal h2{
+        font-size: 19px; /* Smaller font size for small screens */
+    }
+
+    .conf_modal_actions Button{
+        font-size: 12px;
+    }
+
+    
+}

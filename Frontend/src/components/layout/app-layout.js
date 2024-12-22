@@ -84,7 +84,10 @@ export const AppLayout = () => {
             <AppBar position="static">
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
-                        <AdbIcon sx={{ display: "flex", mr: 1 }} />
+                        <AdbIcon sx={{ display: "flex", mr: 1, "@media (max-width:600px)": {
+                                      fontSize: "19px", // Font size for extra-small devices
+                                    }
+                                    }} />
                         <Link to="/" style={{ textDecoration: "none", flexGrow: 1 }}>
                             <Typography
                                 variant="h6"
@@ -96,6 +99,11 @@ export const AppLayout = () => {
                                     fontWeight: 700,
                                     letterSpacing: ".3rem",
                                     color: "white",
+                                    "@media (max-width:600px)": {
+                                      fontSize: "13px", // Font size for extra-small devices
+                                      fontWeight: "9px",
+                                      letterSpacing: "1px"
+                                    }
                                 }}
                             >
                                 Library Management System
@@ -142,7 +150,7 @@ export const AppLayout = () => {
                                     onClick={() => {
                                         setOpenLoginDialog(true)
                                     }}
-                                    sx={{ my: 2, color: "white", display: "block" }}
+                                    sx={{ my: 2, color: "white", display: "block", fontSize: { xs: "12px", sm: "14px", md: "20px" } }}
                                 >
                                     Login
                                 </Button>

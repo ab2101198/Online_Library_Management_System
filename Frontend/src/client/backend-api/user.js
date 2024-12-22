@@ -1,4 +1,5 @@
 const UserApi = {
+  
   borrowBook: async (isbn, userId) => {
     const res = await fetch("http://localhost:8080/v1/user/borrow", {
       method: "POST",
@@ -18,8 +19,8 @@ const UserApi = {
     return res.json()
   },
   getBorrowBook: async () => {
-    const res = await fetch("http://localhost:8080/v1/user/borrowed-books", { method: "GET", credentials: 'include' })
-    return res.json()
+    const res = await fetch("http://localhost:8080/v1/user/borrowed-books", { method: "GET", credentials: 'include'})
+    return  res.json()
   },
   login: async (username, password) => {
     const res = await fetch("http://localhost:8080/v1/user/login", {
@@ -28,7 +29,7 @@ const UserApi = {
       headers: { "Content-Type": "application/json" },
       credentials: 'include'
     })
-    return res.json()
+    return await res.json()
   },
   getProfile: async () => {
     const res = await fetch("http://localhost:8080/v1/user/profile", { method: "GET", credentials: 'include' })

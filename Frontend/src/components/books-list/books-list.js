@@ -28,7 +28,7 @@ export const BooksList = () => {
     const [rowsPerPage, setRowsPerPage] = useState(10)
     const [activeBookIsbn, setActiveBookIsbn] = useState("")
     const [openModal, setOpenModal] = useState(false)
-    const { isAdmin, user } = useUser()
+    const { isAdmin, user} = useUser()
 
 
     const fetchBooks = async () => {
@@ -42,13 +42,14 @@ export const BooksList = () => {
     }
 
     const fetchUserBook = async () => {
-        try {
-            const { books } = await BackendApi.user.getBorrowBook();
-            setBorrowedBook(books || []);
-        } catch (error) {
-            console.error("Failed to fetch borrowed books", error);
-            setBorrowedBook([]);
-        }
+        
+            try {
+                const { books } = await BackendApi.user.getBorrowBook();
+                setBorrowedBook(books || []);
+            } catch (error) {
+                console.error("Failed to fetch borrowed books", error);
+                setBorrowedBook([]);
+            }   
     }
 
     const deleteBook = () => {
@@ -62,14 +63,20 @@ export const BooksList = () => {
     }
 
     useEffect(() => {
-        fetchBooks().catch(console.error)
-        fetchUserBook().catch(console.error)
+        
+            fetchBooks().catch(console.error)
+            fetchUserBook().catch(console.error)
+        
     }, [])
+
+    
 
     return (
         <>
             <div className={`${classes.pageHeader} ${classes.mb2}`}>
-                <Typography variant="h5">Book List</Typography>
+                <Typography variant="h5" sx={{ "@media (max-width:600px)": {
+                                      fontSize: "18px", // Font size for extra-small devices
+                                    } }}>Book List</Typography>
                 {isAdmin && (
                     <Button variant="contained" color="primary" component={RouterLink} to="/admin/books/add">
                         Add Book
@@ -158,10 +165,21 @@ export const BooksList = () => {
                             page={page}
                             onPageChange={(e, newPage) => setPage(newPage)}
                         />
-                        <Modal open={openModal} onClose={(e) => setOpenModal(false)}>
-                            <Card className={classes.conf_modal}>
+                        <Modal open={openModal} onClose={(e) => setOpenModal(false)}
+                           sx={{ "@media (max-width:600px)": {
+                            right: "205px", // Font size for extra-small devices
+                            top:"-270px"
+                          },
+                          top: "-195px",
+                          right: "205px" 
+                          }} >
+                            <Card className={classes.conf_modal}
+                                   
+                            >
                                 <CardContent>
-                                    <h2>Are you sure?</h2>
+                                    <h2
+                                    
+                                    >Are you sure?</h2>
                                 </CardContent>
                                 <CardActions className={classes.conf_modal_actions}>
                                     <Button variant="contained" onClick={() => setOpenModal(false)}>
@@ -180,10 +198,12 @@ export const BooksList = () => {
             )}
 
             {
-                user && !isAdmin && borrowedBook.length > 0 && (
+                user && !isAdmin && borrowedBook.length>0 && (
                     <>
                         <div className={`${classes.pageHeader} ${classes.mb2}`}>
-                            <Typography variant="h5">Borrowed Books</Typography>
+                            <Typography variant="h5" sx={{ "@media (max-width:600px)": {
+                                      fontSize: "19px", // Font size for extra-small devices
+                                    } }}>Borrowed Books</Typography>
                         </div>
                         {/* {console.log(borrowedBook.length)} */}
                         {/* {borrowedBook.length > 0 ? ( */}

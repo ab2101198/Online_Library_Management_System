@@ -80,7 +80,7 @@ export const Book = () => {
     return (
         book && (
             <div className={classes.wrapper}>
-                <Typography variant="h5" align="center" style={{ marginBottom: 20 }}>
+                <Typography variant="h5" align="center" style={{ marginBottom: 20 }} sx={{ fontSize: {xs:"20px"} }}>
                     Book Details
                 </Typography>
                 <Card>
@@ -101,9 +101,15 @@ export const Book = () => {
                         }}
                         centered
                     >
-                        <Tab label="Book Details" tabIndex={0} />
-                        <Tab label="Price History" tabIndex={1} />
-                        <Tab label="Quantity History" tabIndex={2} />
+                        <Tab label="Book Details" tabIndex={0} sx={{ "@media (max-width:600px)": {
+            fontSize: "8px", // Font size for extra-small devices
+        }, }}/>
+                        <Tab label="Price History" tabIndex={1} sx={{ "@media (max-width:600px)": {
+            fontSize: "8px", // Font size for extra-small devices
+        }, }}/>
+                        <Tab label="Quantity History" tabIndex={2} sx={{ "@media (max-width:600px)": {
+            fontSize: "8px", // Font size for extra-small devices
+        }, }}/>
                     </Tabs>
 
                     <TabPanel value={openTab} index={0}>
@@ -188,6 +194,9 @@ export const Book = () => {
                                         variant="contained"
                                         onClick={borrowBook}
                                         disabled={book && user && book.borrowedBy.includes(user._id)}
+                                        sx={{ "@media (max-width:600px)": {
+                                            fontSize: "11px", // Font size for extra-small devices
+                                        }, }}
                                     >
                                         Borrow
                                     </Button>
@@ -195,12 +204,18 @@ export const Book = () => {
                                         variant="contained"
                                         onClick={returnBook}
                                         disabled={book && user && !book.borrowedBy.includes(user._id)}
+                                        sx={{ "@media (max-width:600px)": {
+                                            fontSize: "11px", // Font size for extra-small devices
+                                        }, }}
                                     >
                                         Return
                                     </Button>
                                 </>
                             )}
-                            <Button type="submit" variant="text" color="primary" onClick={() => navigate(-1)}>
+                            <Button type="submit" variant="text" color="primary" onClick={() => navigate(-1)}
+                                sx={{ "@media (max-width:600px)": {
+                                    fontSize: "11px", // Font size for extra-small devices
+                                }, }}>
                                 Go Back
                             </Button>
                         </div>
