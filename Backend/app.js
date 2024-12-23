@@ -27,7 +27,7 @@ app.use(
     saveUninitialized: false,
     resave: false,
     cookie: { maxAge: 1000 * 60 * 60 * 24, 
-              secure: process.env.NODE_ENV === 'production',  // Ensure cookie is only sent over HTTPS
+              secure: true,  // Ensure cookie is only sent over HTTPS
               // sameSite: 'strict',  // Allow cookie to be sent with cross-origin requests
               // httpOnly: true,
             },
