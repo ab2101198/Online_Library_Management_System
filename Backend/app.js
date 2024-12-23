@@ -22,7 +22,6 @@ app.use(express.urlencoded({ extended: false }))
 
 app.use(
   sessions({
-    domain: 'https://onlinelibrarymanagementfrontend-441sbbkay.vercel.app',
     secret: 'mysecret',
     saveUninitialized: false,
     resave: false,
@@ -37,7 +36,7 @@ app.use(
 
 
 const corsOptions = {
-  origin: "https://onlinelibrarymanagementfrontend-441sbbkay.vercel.app",
+  origin: "https://online-library-management-system-frontend.onrender.com",
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', 
   credentials: true
 };
