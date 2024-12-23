@@ -1,6 +1,5 @@
-const { BookApi } = require("./book")
-const { UserApi } = require("./user")
-
+import BookApi from "./book.js";
+import UserApi from "./user.js";
 const BackendApi = {
   book: BookApi,
   user: UserApi,
