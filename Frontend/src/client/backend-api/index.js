@@ -5,5 +5,5 @@ const BackendApi = {
   user: UserApi,
 };
 
-
-export default BackendApi;
+export { BackendApi }; 
+// export default BackendApi;
