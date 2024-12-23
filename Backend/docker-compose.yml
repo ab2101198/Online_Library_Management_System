@@ -4,7 +4,7 @@ services:
   lms-mongo:
     image: "mongo"
     environment:
-      - MONGO_INITDB_DATABASE=lms
+      - MONGO_INITDB_DATABASE=LMS
       - MONGO_INITDB_ROOT_USERNAME=root_local
       - MONGO_INITDB_ROOT_PASSWORD=root_password
     container_name: lms-mongo
