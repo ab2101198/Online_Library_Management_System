@@ -29,4 +29,4 @@ const BookApi = {
   },
 }
 
-module.exports = { BookApi }
+export default BookApi;
