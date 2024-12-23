@@ -14,7 +14,7 @@ import {
     MenuItem,
     Typography,
 } from "@mui/material"
-import BackendApi from "../../client/backend-api/index.js";
+import { BackendApi } from "../../client/backend-api/index.js";
 import classes from "./styles.module.css"
 
 dayjs.extend(utc)
