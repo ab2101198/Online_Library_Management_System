@@ -22,6 +22,7 @@ app.use(express.urlencoded({ extended: false }))
 
 app.use(
   sessions({
+    domain: 'https://online-library-management-system-frontend.onrender.com',
     secret: 'mysecret',
     saveUninitialized: true,
     resave: true,
