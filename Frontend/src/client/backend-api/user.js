@@ -41,4 +41,7 @@ const UserApi = {
   },
 }
 
-module.exports = { UserApi }
+
+export default UserApi;
+
+// module.exports = { UserApi }
